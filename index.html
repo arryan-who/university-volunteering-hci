@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Volunteering — HCI Research</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#hero">Overview</a></li>
+    <li><a href="#broken">Problem</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#personas">Personas</a></li>
+    <li><a href="#empathy">Empathy Maps</a></li>
+    <li><a href="#journey">Journey Maps</a></li>
+    <li><a href="#pain">Pain Points</a></li>
+    <li><a href="#stories">User Stories</a></li>
+    <li><a href="#cardsort">Card Sort</a></li>
+    <li><a href="#ia-v1">V1 IA</a></li>
+    <li><a href="#treetest">Tree Test</a></li>
+    <li><a href="#pivot">IA Pivot</a></li>
+    <li><a href="#ia-v2">V2 IA</a></li>
+    <li><a href="#moscow">MoSCoW</a></li>
+    <li><a href="#dfv">DFV</a></li>
+    <li><a href="#mvp">Final MVP</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <h1>University Volunteering</h1>
+  <p class="subtitle">From Broken Experience to Evidence-Based Information Architecture</p>
+  <p class="description">An HCI research study exploring how university students and committees discover, evaluate, coordinate and commit to short-term volunteering opportunities.</p>
+  <div class="output-note">Final output: A research-backed Information Architecture and MVP prioritization blueprint.</div>
+
+  <div class="stakeholder-row">
+    <div class="stakeholder-box student">
+      <div class="role">Student / Volunteer</div>
+      <p>"Needs flexible opportunities that fit around existing academic and personal commitments."</p>
+    </div>
+    <div class="stakeholder-box committee">
+      <div class="role">Committee / Organizer</div>
+      <p>"Needs available and dependable manpower when event requirements arise."</p>
+    </div>
+  </div>
+
+  <div class="process-row">
+    EMPATHIZE &rarr; DEFINE &rarr; STRUCTURE &rarr; TEST &rarr; PIVOT &rarr; PRIORITIZE
+  </div>
+  <p class="no-ui-note">No UI screens were designed as part of this examination.</p>
+</header>
+
+<main>
+
+<!-- ===================== PHASE 1 ===================== -->
+<div class="phase-banner" id="phase1">
+  <div class="phase-label">Phase 1 of 3</div>
+  <h2>Empathy &amp; Definition</h2>
+  <p>Understanding the users and the real problem before proposing a solution.</p>
+</div>
+
+<!-- 01 BROKEN EXPERIENCE -->
+<section id="broken">
+  <div class="section-title">01</div>
+  <h2>The Broken Experience</h2>
+  <p>The findings below are synthesized research findings — not unsupported assumptions.</p>
+
+  <blockquote class="research-quote">
+    "Students interested in occasional university volunteering struggle to discover and evaluate suitable opportunities because task responsibilities and time commitments are often unclear and opportunities are discovered through fragmented channels. Meanwhile, committees struggle to identify and secure available, reliable volunteers when they need them."
+  </blockquote>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="box student-box">
+        <div class="box-label student">Student Side — Synthesized Findings</div>
+        <ul class="plain">
+          <li>Opportunities discovered through informal and scattered channels</li>
+          <li>Unclear task responsibilities before committing</li>
+          <li>Unclear duration and time commitment</li>
+          <li>Difficulty judging whether an opportunity fits existing commitments</li>
+          <li>Preference for short, bounded volunteering — not ongoing roles</li>
+          <li>Not necessarily interested in regular committee membership</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box committee-box">
+        <div class="box-label committee">Committee Side — Synthesized Findings</div>
+        <ul class="plain">
+          <li>Responses often arrive too late to plan effectively</li>
+          <li>Difficult to know who is actually available</li>
+          <li>Individual outreach is time-consuming</li>
+          <li>Volunteers may cancel or arrive late after agreeing</li>
+          <li>Existing members absorb additional workload</li>
+          <li>Event setup and breakdown commonly require additional manpower</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 RESEARCH BASIS -->
+<section id="research">
+  <div class="section-title">02</div>
+  <h2>Research Basis</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Group</th>
+        <th>Method</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Students</td>
+        <td>Survey respondents</td>
+        <td><strong>n = 10</strong></td>
+      </tr>
+      <tr>
+        <td>Committee</td>
+        <td>Survey respondents</td>
+        <td><strong>n = 6</strong></td>
+      </tr>
+      <tr>
+        <td>Committee (additional)</td>
+        <td>VP conversations (interview input)</td>
+        <td><strong>4 conversations</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="method-note">Sample sizes are exploratory and are used for HCI sensemaking rather than statistical generalization.</p>
+
+  <h3>Student Research Findings — n = 10</h3>
+  <div class="box student-box">
+    <div class="stat-row"><span class="stat-num student">5/10</span><span class="stat-label">Do not know what the work involves</span></div>
+    <div class="stat-row"><span class="stat-num student">5/10</span><span class="stat-label">Struggled to find a suitable opportunity</span></div>
+    <div class="stat-row"><span class="stat-num student">5/10</span><span class="stat-label">Prefer 1–2 hour tasks</span></div>
+    <div class="stat-row"><span class="stat-num student">9/10</span><span class="stat-label">Want clear task descriptions</span></div>
+    <div class="stat-row"><span class="stat-num student">7/10</span><span class="stat-label">Want rewards or perks</span></div>
+    <div class="stat-row"><span class="stat-num student">7/10</span><span class="stat-label">Want recognition or certificate</span></div>
+    <div class="stat-row"><span class="stat-num student">7/10</span><span class="stat-label">Need 2–3 days' notice before an opportunity</span></div>
+  </div>
+
+  <h3>Committee Research Findings — n = 6</h3>
+  <div class="box committee-box">
+    <div class="stat-row"><span class="stat-num committee">5/6</span><span class="stat-label">Responses come too late to coordinate</span></div>
+    <div class="stat-row"><span class="stat-num committee">3/6</span><span class="stat-label">Difficult to know who is available</span></div>
+    <div class="stat-row"><span class="stat-num committee">3/6</span><span class="stat-label">Too much individual contacting required</span></div>
+    <div class="stat-row"><span class="stat-num committee">3/6</span><span class="stat-label">Students cancel after agreeing</span></div>
+    <div class="stat-row"><span class="stat-num committee">6/6</span><span class="stat-label">Experienced late arrivals from volunteers</span></div>
+    <div class="stat-row"><span class="stat-num committee">6/6</span><span class="stat-label">Existing members take on extra work</span></div>
+    <div class="stat-row"><span class="stat-num committee">Recurring</span><span class="stat-label">Event setup and breakdown require additional volunteers</span></div>
+  </div>
+</section>
+
+<!-- 03 PROTO-PERSONAS -->
+<section id="personas">
+  <div class="section-title">03</div>
+  <h2>Proto-Personas</h2>
+  <p>Initial hypotheses created <strong>before</strong> research — these are assumptions, not findings.</p>
+
+  <div class="assumption-banner">&#9888; These were hypotheses, not research findings. They were later replaced using actual research data.</div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="box student-box">
+        <div class="box-label student">Student — Assumption / Proto-Persona</div>
+        <h3>The Time-Constrained Student</h3>
+        <ul class="plain">
+          <li>Limited free time</li>
+          <li>Prefers flexible opportunities</li>
+          <li>Interested in short tasks</li>
+          <li>Discovers through informal channels</li>
+          <li>Wants recognition and experience</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box committee-box">
+        <div class="box-label committee">Committee — Assumption / Proto-Persona</div>
+        <h3>The Overloaded Organizer</h3>
+        <ul class="plain">
+          <li>Needs extra manpower frequently</li>
+          <li>Uses personal contacts</li>
+          <li>Recruits via WhatsApp / direct messages</li>
+          <li>Faces last-minute issues</li>
+          <li>Wants reliable volunteers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title" style="margin-top:30px;">04</div>
+  <h2>Evidence-Based Personas</h2>
+  <p>Derived from research patterns: The names are composite/pseudonymous labels and do not identify individual participants.</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="box student-box">
+        <div class="box-label student">Student Persona — Evidence-Based</div>
+        <h3>Ananya Rao — The Flexible Contributor</h3>
+        <p><em>Second-year student. Volunteers occasionally. Not a regular committee member.</em></p>
+        <strong>Goals</strong>
+        <ul class="plain">
+          <li>Find suitable short-term opportunities</li>
+          <li>Understand the work before committing</li>
+          <li>Fit volunteering around existing responsibilities</li>
+          <li>Gain meaningful experience and recognition</li>
+        </ul>
+        <strong>Frustrations</strong>
+        <ul class="plain">
+          <li>Scattered opportunity discovery</li>
+          <li>Unclear task expectations</li>
+          <li>Unclear duration and commitment</li>
+          <li>Difficulty judging suitability</li>
+        </ul>
+        <strong>Behaviours</strong>
+        <ul class="plain">
+          <li>Uses WhatsApp, friends, classmates and committee contacts</li>
+          <li>Evaluates carefully before committing</li>
+          <li>Prefers bounded, short commitments</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box committee-box">
+        <div class="box-label committee">Committee Persona — Evidence-Based</div>
+        <h3>Vikram Joshi — The Event Manpower Coordinator</h3>
+        <p><em>Committee VP / Core Representative.</em></p>
+        <strong>Goals</strong>
+        <ul class="plain">
+          <li>Find additional manpower quickly</li>
+          <li>Know who is currently available</li>
+          <li>Reduce individual outreach burden</li>
+          <li>Secure dependable participation</li>
+        </ul>
+        <strong>Frustrations</strong>
+        <ul class="plain">
+          <li>Late responses</li>
+          <li>Unclear volunteer availability</li>
+          <li>Cancellations and late arrivals</li>
+          <li>Existing members absorbing extra work</li>
+        </ul>
+        <strong>Behaviours</strong>
+        <ul class="plain">
+          <li>Relies on personal contacts and WhatsApp</li>
+          <li>Follows up when responses are insufficient</li>
+          <li>Reorganizes tasks when volunteers do not show</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 EMPATHY MAPS -->
+<section id="empathy">
+  <div class="section-title">05</div>
+  <h2>Empathy Maps</h2>
+  <p>
+    <strong>SAYS</strong> = direct or reported statements &nbsp;|&nbsp;
+    <strong>THINKS</strong> = inferred (not direct quotes) &nbsp;|&nbsp;
+    <strong>DOES</strong> = reported or observed behaviour &nbsp;|&nbsp;
+    <strong>FEELS</strong> = inferred (not direct quotes)
+  </p>
+
+ <div class="two-col">
+    <div class="col">
+      <div style="border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+        <div style="background-color: #eff0fe; padding: 14px 18px; border-bottom: 2px solid #5b67f0;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #5b67f0; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">Student Empathy Map — Ananya Rao</div>
+        </div>
+        <img src="assets/empathy-map-student.jpg" style="width:100%; display:block;" alt="Student empathy map for Ananya Rao" />
+        <div style="padding: 16px 18px; border-top: 1px solid #e5e7eb; background-color: #fafafa;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #9ca3af; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px;">Key Insight</div>
+          <p style="margin: 0; font-style: italic; font-size: 14px; color: #374151;">"The student is not necessarily unwilling to volunteer; uncertainty about the opportunity and its commitment makes participation harder to evaluate."</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div style="border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+        <div style="background-color: #ecfdf5; padding: 14px 18px; border-bottom: 2px solid #10b981;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #059669; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">Committee Empathy Map — Vikram Joshi</div>
+        </div>
+        <img src="assets/empathy-map-committee.jpg" style="width:100%; display:block;" alt="Committee empathy map for Vikram Joshi" />
+        <div style="padding: 16px 18px; border-top: 1px solid #e5e7eb; background-color: #fafafa;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #9ca3af; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px;">Key Insight</div>
+          <p style="margin: 0; font-style: italic; font-size: 14px; color: #374151;">"Recruitment is not successful when someone simply says 'yes'; the volunteer needs to be available, committed and dependable when the work begins."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY MAPS -->
+<section id="journey">
+  <div class="section-title">05b</div>
+  <h2>Journey Maps</h2>
+  <p>Emotion was not treated as a decorative curve. The lowest point was connected back to research evidence.</p>
+
+  <figure>
+    <img src="assets/user-journey-map-student.jpg" class="asset" alt="Student journey map showing emotional progression across six stages: Discover, Understand, Evaluate, Commit, Participate, Afterward. The lowest emotional point is at Stage 3 Evaluate, where the student is hesitant due to unclear task details and commitment." />
+    <figcaption>Student Journey Map — lowest emotional point at Evaluate (Stage 3). Evidence: 5/10 don't know what the work involves, 9/10 want clear task descriptions.</figcaption>
+  </figure>
+
+  <figure style="margin-top:20px;">
+    <img src="assets/user-journey-map-committee.jpg" class="asset" alt="Committee journey map showing emotional progression across stages: Need Arises, Search, Outreach, Wait and Confirm, Event Day, Recovery. The lowest point is at Stage 4 Wait and Confirm, where the coordinator is anxious about late responses and cancellations." />
+    <figcaption>Committee Journey Map — lowest emotional point at Stage 4: Wait &amp; Confirm (Anxious). Evidence: 5/6 responses too late, 3/6 cancellations, 6/6 experienced late arrivals.</figcaption>
+  </figure>
+</section>
+
+<!-- 06 PAIN POINTS -->
+<section id="pain">
+  <div class="section-title">06</div>
+  <h2>Core Pain Points</h2>
+  <p>Pain points were derived from evidence, not stated as assumptions.</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="chain">
+        <div class="chain-header">Student — Evidence to Pain Point</div>
+        <div class="chain-step"><span class="step-tag">DATA</span>5/10 don't know what the work involves. 9/10 want clear task descriptions.</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">PATTERN</span>Task and commitment information is consistently insufficient.</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">INSIGHT</span>Evaluation of suitability is impaired by information gaps.</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step highlight"><span class="step-tag">PAIN</span>"Students struggle to confidently choose opportunities because task responsibilities and time commitments are often unclear, while fragmented discovery makes suitable opportunities difficult to find."</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="chain">
+        <div class="chain-header">Committee — Evidence to Pain Point</div>
+        <div class="chain-step"><span class="step-tag">DATA</span>5/6 late responses. 3/6 unclear availability. 3/6 cancellations. 6/6 late arrivals.</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">PATTERN</span>Volunteer reliability and availability are consistently unpredictable.</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">INSIGHT</span>Agreement does not guarantee dependable participation.</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step highlight"><span class="step-tag">PAIN</span>"Committees struggle to secure dependable manpower because volunteer availability is difficult to see, recruitment relies on individual outreach, and agreement does not translate into reliable participation."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USER STORIES -->
+<section id="stories">
+  <div class="section-title">07</div>
+  <h2>User Stories</h2>
+  <p>Derived from pain points — these generated the information requirements, not the other way around.</p>
+
+  <div class="user-story">
+    <div class="us-id">US01</div>
+    <div class="us-body">
+      <div class="us-tag">Discover</div>
+      <blockquote>"As a student, I want to discover available volunteering opportunities in one clear place so that I don't have to depend on scattered messages or personal contacts."</blockquote>
+    </div>
+  </div>
+
+  <div class="user-story">
+    <div class="us-id">US02</div>
+    <div class="us-body">
+      <div class="us-tag">Understand</div>
+      <blockquote>"As a student, I want to clearly understand the task, responsibilities, duration and timing so that I can decide whether I can realistically commit."</blockquote>
+    </div>
+  </div>
+
+  <div class="user-story">
+    <div class="us-id">US03</div>
+    <div class="us-body">
+      <div class="us-tag">Match Availability</div>
+      <blockquote>"As a student, I want to find opportunities that fit my available time and preferred level of commitment so that volunteering does not conflict with my responsibilities."</blockquote>
+    </div>
+  </div>
+
+  <div class="user-story">
+    <div class="us-id">US04</div>
+    <div class="us-body">
+      <div class="us-tag">Commit Reliably</div>
+      <blockquote class="committee">"As a committee representative, I want to know which students are available and willing to commit to a task so that I can secure dependable manpower without repeatedly contacting people individually."</blockquote>
+    </div>
+  </div>
+
+  <h3>Phase 1 Traceability — Evidence to Information Requirement</h3>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="chain">
+        <div class="chain-header">Chain 1 — Opportunity Details</div>
+        <div class="chain-step"><span class="step-tag">DATA</span>5/10 don't know what the work involves</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">GAP</span>Information gap — task details insufficient</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">US</span>US02 — Understand</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step highlight"><span class="step-tag">ITEM</span>Opportunity Details</div>
+      </div>
+      <div class="chain" style="margin-top:12px;">
+        <div class="chain-header">Chain 2 — Volunteer Opportunities</div>
+        <div class="chain-step"><span class="step-tag">DATA</span>5/10 struggled to find suitable opportunities</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">GAP</span>Discovery gap — fragmented channels</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">US</span>US01 — Discover</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step highlight"><span class="step-tag">ITEM</span>Volunteer Opportunities</div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="chain">
+        <div class="chain-header">Chain 3 — Available Volunteers</div>
+        <div class="chain-step"><span class="step-tag">DATA</span>3/6 difficult to know who is available</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">GAP</span>Availability gap — recruitment uncertainty</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">US</span>US04 — Commit Reliably</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step highlight"><span class="step-tag">ITEM</span>Available Volunteers</div>
+      </div>
+      <div class="chain" style="margin-top:12px;">
+        <div class="chain-header">Chain 4 — Event Volunteer Needs</div>
+        <div class="chain-step"><span class="step-tag">DATA</span>Event setup/breakdown needs additional volunteers — recurring finding</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step"><span class="step-tag">GAP</span>Committee must define what help is needed</div>
+        <div class="arrow-row">&#8595;</div>
+        <div class="chain-step highlight"><span class="step-tag">ITEM</span>Event Volunteer Needs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PHASE 2 ===================== -->
+<div class="phase-banner phase2" id="phase2">
+  <div class="phase-label">Phase 2 of 3</div>
+  <h2>Information Architecture &amp; Validation</h2>
+  <p>Turning user needs into information structure — then testing whether users can actually navigate it.</p>
+</div>
+
+<!-- 18-ITEM CONTENT INVENTORY -->
+<section>
+  <div class="section-title">07b</div>
+  <h2>18-Item Content Inventory</h2>
+  <p>These are <strong>candidate information items</strong> derived from user stories — not final features.</p>
+
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Candidate Items</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Opportunities</td><td>Available Opportunities, Opportunity Details, Date &amp; Time</td></tr>
+      <tr><td>Task &amp; Requirements</td><td>Task Responsibilities, Task Requirements, Expected Duration, Eligibility / Who Can Participate, Committee Event Needs</td></tr>
+      <tr><td>My Participation</td><td>Availability, My Commitments, My Volunteering History</td></tr>
+      <tr><td>Rewards &amp; Development</td><td>Rewards &amp; Perks, Skills &amp; Experience, Recognition / Contribution Record</td></tr>
+      <tr><td>Volunteer Management</td><td>Volunteer Availability, Volunteer Requests, Volunteer Commitment / Confirmation, Volunteer Instructions</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- CARD SORT -->
+<section id="cardsort">
+  <div class="section-title">08</div>
+  <h2>Card Sort</h2>
+  <p>Hybrid Card Sort / Workshop — 11 responses. We needed to understand how users naturally group volunteering information instead of imposing our own structure.</p>
+
+  <h3>Strong Consensus Items</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Category Agreed</th><th>Consensus</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Available Opportunities</td><td>Opportunities</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>My Commitments</td><td>My Participation</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Rewards &amp; Perks</td><td>Rewards &amp; Development</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Task Requirements</td><td>Task &amp; Requirements</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Volunteer Instructions</td><td>Volunteer Management</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Volunteer Availability</td><td>Volunteer Management</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Volunteer Requests</td><td>Volunteer Management</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Volunteer Commitment / Confirmation</td><td>Volunteer Management</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>Task Responsibilities</td><td>Task &amp; Requirements</td><td><span class="badge green">Strong</span></td></tr>
+      <tr><td>My Volunteering History</td><td>My Participation</td><td><span class="badge green">Strong</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Ambiguous Items</h3>
+  <div class="box warning-box">
+    <div class="box-label">Inconsistently categorized — disagreement noted</div>
+    <p>Date &amp; Time, Committee Event Needs, Skills &amp; Experience, Recognition / Contribution Record, Eligibility / Who Can Participate</p>
+    <p><strong>Date &amp; Time:</strong> Interpreted differently by participants — label did not have a universally stable mental model.</p>
+    <p><strong>Committee Event Needs:</strong> Inconsistently categorized — some placed it under Task &amp; Requirements, others under Volunteer Management. It was carried forward and deliberately tested in the Tree Test.</p>
+    <p>Disagreements were not hidden. Ambiguous items were used to design targeted Tree Test tasks.</p>
+  </div>
+
+  <h3>Mental Models from Card Sort</h3>
+  <p>"The Card Sort transformed individual content items into broader user-facing mental models."</p>
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Mental Model</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Opportunities</td><td>"What can I participate in?"</td></tr>
+      <tr><td>Task &amp; Requirements</td><td>"What exactly does the work involve?"</td></tr>
+      <tr><td>My Participation</td><td>"What am I available for and what have I committed to?"</td></tr>
+      <tr><td>Rewards &amp; Development</td><td>"What do I gain from contributing?"</td></tr>
+      <tr><td>Volunteer Management</td><td>"How are volunteers coordinated?"</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- V1 IA -->
+<section id="ia-v1">
+  <div class="section-title">09</div>
+  <h2>V1 Information Architecture</h2>
+  <p>Hypothesis generated from Card Sort — not a validated structure. This is what was tested in the Tree Test.</p>
+
+  <div class="ia-tree">
+    <div class="root">UNIVERSITY VOLUNTEERING</div>
+    |<br>
+    +-- <span class="branch">OPPORTUNITIES</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Available Opportunities</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Opportunity Details</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Date &amp; Time</span><br>
+    |<br>
+    +-- <span class="branch">TASK &amp; REQUIREMENTS</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Task Responsibilities</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Task Requirements</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Expected Duration</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Eligibility / Who Can Participate</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Committee Event Needs</span><br>
+    |<br>
+    +-- <span class="branch">MY PARTICIPATION</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Availability</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">My Commitments</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">My Volunteering History</span><br>
+    |<br>
+    +-- <span class="branch">REWARDS &amp; DEVELOPMENT</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Rewards &amp; Perks</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Skills &amp; Experience</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Recognition / Contribution Record</span><br>
+    |<br>
+    +-- <span class="branch">VOLUNTEER MANAGEMENT</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Availability</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Requests</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Commitment / Confirmation</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Instructions</span>
+  </div>
+</section>
+
+<!-- TREE TEST -->
+<section id="treetest">
+  <div class="section-title">10</div>
+  <h2>Tree Test</h2>
+  <p>"The Tree Test tests whether users can find information in the proposed hierarchy without the distraction of visual UI."</p>
+
+  <div class="box danger-box">
+    <div class="box-label danger">Data Integrity Note</div>
+    <p>7 CSV exports were collected. P02 and P03 were duplicate response exports. Therefore: <strong>6 independently verifiable participants</strong>, not 7. Raw responses were retained; duplicates were excluded from the independent participant count.</p>
+    <p>Breakdown: 3 Student / Volunteer &nbsp;|&nbsp; 3 Committee / Organizer &nbsp;|&nbsp; 18 independent task observations total.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="box student-box">
+        <div class="box-label student">Student Tasks</div>
+        <ul class="plain">
+          <li><strong>S1:</strong> "Find currently available volunteering opportunities."</li>
+          <li><strong>S2:</strong> "Find when an opportunity takes place."</li>
+          <li><strong>S3:</strong> "Find the student's record of contributions and recognition."</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box committee-box">
+        <div class="box-label committee">Committee Tasks</div>
+        <ul class="plain">
+          <li><strong>C1:</strong> "Find students who are currently available to help."</li>
+          <li><strong>C2:</strong> "Find the volunteer work/manpower needed for an event."</li>
+          <li><strong>C3:</strong> "Verify a student's commitment to an assigned task."</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tree Test Results</h3>
+  <table>
+    <thead>
+      <tr><th>Task</th><th>Description</th><th>Group</th><th>Success</th><th>Rate</th><th>Bar</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S1</td><td>Opportunity Discovery</td><td>Student</td><td>2/3</td><td>66.7%</td>
+        <td><div class="bar-wrap"><div class="bar yellow" style="width:80px;"></div></div></td>
+      </tr>
+      <tr>
+        <td>S2</td><td>Date &amp; Time</td><td>Student</td><td>2/3</td><td>66.7%</td>
+        <td><div class="bar-wrap"><div class="bar yellow" style="width:80px;"></div></div></td>
+      </tr>
+      <tr>
+        <td>S3</td><td>Contribution Record</td><td>Student</td><td>3/3</td><td>100%</td>
+        <td><div class="bar-wrap"><div class="bar green" style="width:120px;"></div></div></td>
+      </tr>
+      <tr>
+        <td>C1</td><td>Volunteer Availability</td><td>Committee</td><td>2/3</td><td>66.7%</td>
+        <td><div class="bar-wrap"><div class="bar yellow" style="width:80px;"></div></div></td>
+      </tr>
+      <tr class="fail-row">
+        <td>C2 &#8595;</td><td>Event Volunteer Needs — LOWEST</td><td>Committee</td><td>1/3</td><td>33.3%</td>
+        <td><div class="bar-wrap"><div class="bar red" style="width:40px;"></div></div></td>
+      </tr>
+      <tr>
+        <td>C3</td><td>Volunteer Commitment</td><td>Committee</td><td>3/3</td><td>100%</td>
+        <td><div class="bar-wrap"><div class="bar green" style="width:120px;"></div></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr><th>Group</th><th>Success</th><th>Rate</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Overall</strong></td><td>13/18</td><td><strong>72.2%</strong></td></tr>
+      <tr><td>Students</td><td>7/9</td><td>77.8%</td></tr>
+      <tr><td>Committee</td><td>6/9</td><td>66.7%</td></tr>
+    </tbody>
+  </table>
+
+  <h3>What Failed — and What We Learned</h3>
+  <div class="box danger-box">
+    <div class="box-label danger">C2 — Event Volunteer Needs: 1/3 Success (33.3%)</div>
+    <p>"Committee Event Needs did not have a stable mental model in V1. Participants navigated to incorrect locations."</p>
+    <p>Observed incorrect navigation paths:</p>
+    <div class="bad-path">Task &amp; Requirements &rarr; Task Requirements (wrong)</div>
+    <div class="bad-path">Volunteer Management &rarr; Volunteer Commitment / Confirmation (wrong)</div>
+    <p>"The ambiguity was consistent with the earlier Card Sort disagreement. The Tree Test did not create the problem — it exposed a structural weakness already visible in the research."</p>
+  </div>
+
+  <h3>Terminology Collision — "Available"</h3>
+  <p>V1 used "Available Opportunities" and "Volunteer Availability" — users could interpret "available" as describing opportunities or people. This was a terminology problem, not a cosmetic one.</p>
+
+  <div class="pivot-wrap">
+    <div class="pivot-box v1">
+      <div class="pivot-header">V1 — Ambiguous</div>
+      <div class="pivot-body">
+        <span class="removed">Available Opportunities</span><br>
+        <span class="removed">Volunteer Availability</span>
+      </div>
+    </div>
+    <div class="pivot-arrow-mid">&rarr;</div>
+    <div class="pivot-box v2">
+      <div class="pivot-header">V2 — Clarified</div>
+      <div class="pivot-body">
+        <span class="added">Volunteer Opportunities</span><br>
+        <span class="added">Available Volunteers</span>
+      </div>
+    </div>
+  </div>
+
+  <h3>Date &amp; Time — Restrained Interpretation</h3>
+  <div class="box">
+    <div class="box-label neutral">Evidence-Based Restraint</div>
+    <p>"Date &amp; Time achieved 2/3 student task success. One participant reached Date &amp; Time during navigation but ultimately selected Opportunity Details."</p>
+    <p><strong>Conclusion:</strong> The evidence indicates some ambiguity, but does not justify moving Date &amp; Time out of Opportunities. Date &amp; Time was NOT changed without sufficient evidence.</p>
+  </div>
+</section>
+
+<!-- IA PIVOT -->
+<section id="pivot">
+  <div class="section-title">11</div>
+  <h2>V1 &rarr; V2 IA Pivot</h2>
+  <p>Changes were made because of evidence — not preference or aesthetic judgement.</p>
+
+  <div class="pivot-wrap">
+    <div class="pivot-box v1">
+      <div class="pivot-header">V1</div>
+      <div class="pivot-body">
+        OPPORTUNITIES<br>
+        &nbsp;&nbsp;+-- <span class="removed">Available Opportunities</span><br><br>
+        TASK &amp; REQUIREMENTS<br>
+        &nbsp;&nbsp;+-- <span class="removed">Committee Event Needs</span><br><br>
+        VOLUNTEER MANAGEMENT<br>
+        &nbsp;&nbsp;+-- <span class="removed">Volunteer Availability</span>
+      </div>
+    </div>
+    <div class="pivot-arrow-mid">&rarr;</div>
+    <div class="pivot-box v2">
+      <div class="pivot-header">V2</div>
+      <div class="pivot-body">
+        OPPORTUNITIES<br>
+        &nbsp;&nbsp;+-- <span class="added">Volunteer Opportunities</span><br><br>
+        VOLUNTEER MANAGEMENT<br>
+        &nbsp;&nbsp;+-- <span class="added">Available Volunteers</span><br>
+        &nbsp;&nbsp;+-- <span class="added">Event Volunteer Needs</span>
+      </div>
+    </div>
+  </div>
+
+  <p><strong>Evidence chain:</strong> Card Sort ambiguity + Tree Test failure (1/3) &rarr; Interpretation &rarr; Structural Pivot</p>
+
+  <div class="integrity-note">"V2 is Tree-Test-informed. It was not re-tested in this study cycle, so we do not claim that V2 itself has been fully validated."</div>
+</section>
+
+<!-- V2 IA -->
+<section id="ia-v2">
+  <div class="section-title">12</div>
+  <h2>Final V2 Information Architecture</h2>
+  <p>Tree-Test-informed. Changes are justified by evidence.</p>
+
+  <div class="ia-tree">
+    <div class="root">UNIVERSITY VOLUNTEERING</div>
+    |<br>
+    +-- <span class="branch">OPPORTUNITIES</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="changed">Volunteer Opportunities</span> <em style="color:#888;font-size:12px;">(renamed from Available Opportunities)</em><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Opportunity Details</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Date &amp; Time</span> <em style="color:#888;font-size:12px;">(retained — insufficient evidence to move)</em><br>
+    |<br>
+    +-- <span class="branch">TASK &amp; REQUIREMENTS</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Task Responsibilities</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Task Requirements</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Expected Duration</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Eligibility / Who Can Participate</span><br>
+    |<br>
+    +-- <span class="branch">MY PARTICIPATION</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Availability</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">My Commitments</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">My Volunteering History</span><br>
+    |<br>
+    +-- <span class="branch">REWARDS &amp; DEVELOPMENT</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Rewards &amp; Perks</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Skills &amp; Experience</span><br>
+    |&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Recognition / Contribution Record</span><br>
+    |<br>
+    +-- <span class="branch">VOLUNTEER MANAGEMENT</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="changed">Available Volunteers</span> <em style="color:#888;font-size:12px;">(renamed; moved from Volunteer Availability)</em><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Requests</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Commitment / Confirmation</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="leaf">Volunteer Instructions</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;+-- <span class="changed">Event Volunteer Needs</span> <em style="color:#888;font-size:12px;">(moved from Task &amp; Requirements)</em>
+  </div>
+
+  <h3>Phase 2 Validation Summary</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Card Sort responses</td><td>11</td></tr>
+      <tr><td>Tree Test CSV exports collected</td><td>7</td></tr>
+      <tr><td>Duplicate exports (excluded)</td><td>P02 + P03</td></tr>
+      <tr><td>Independent Tree Test participants</td><td>6</td></tr>
+      <tr><td>Stakeholder balance</td><td>3 students + 3 committee</td></tr>
+      <tr><td>Independent task observations</td><td>18</td></tr>
+      <tr><td>Overall Tree Test success</td><td>72.2% (13/18)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== PHASE 3 ===================== -->
+<div class="phase-banner phase3" id="phase3">
+  <div class="phase-label">Phase 3 of 3</div>
+  <h2>Prioritization &amp; MVP</h2>
+  <p>Turning the evidence-backed structure into a defensible minimum viable scope.</p>
+</div>
+
+<!-- MOSCOW -->
+<section id="moscow">
+  <div class="section-title">13</div>
+  <h2>MoSCoW Prioritization</h2>
+  <p>MoSCoW was performed after IA research — not before. Not every research-backed need can be part of the first MVP.</p>
+
+  <p><strong>MUST</strong> = Essential to the core user problem. &nbsp;|&nbsp; <strong>SHOULD</strong> = Important but not required for the first version. &nbsp;|&nbsp; <strong>COULD</strong> = Useful enhancement. &nbsp;|&nbsp; <strong>WON'T</strong> = Deliberately outside MVP scope, not permanently rejected.</p>
+
+  <figure>
+    <img src="assets/moscow-matrix.jpg" class="asset" alt="MoSCoW matrix showing Must Have: Volunteer Opportunities, Opportunity Details, Available Volunteers, Event Volunteer Needs. Should Have: 8 items. Could Have: 4 items. Won't Have: Skills and Experience, Recognition and Contribution Record." />
+    <figcaption>MoSCoW Matrix — Feature Prioritisation</figcaption>
+  </figure>
+
+  <div class="moscow-grid">
+    <div class="moscow-col must">
+      <div class="moscow-header">Must Have — 4 Items</div>
+      <ul>
+        <li>Volunteer Opportunities</li>
+        <li>Opportunity Details</li>
+        <li>Available Volunteers</li>
+        <li>Event Volunteer Needs</li>
+      </ul>
+    </div>
+    <div class="moscow-col should">
+      <div class="moscow-header">Should Have — 8 Items</div>
+      <ul>
+        <li>Date &amp; Time</li>
+        <li>Task Responsibilities</li>
+        <li>Task Requirements</li>
+        <li>Expected Duration</li>
+        <li>Eligibility</li>
+        <li>Availability</li>
+        <li>My Commitments</li>
+        <li>Volunteer Commitment / Confirmation</li>
+      </ul>
+    </div>
+    <div class="moscow-col could">
+      <div class="moscow-header">Could Have — 4 Items</div>
+      <ul>
+        <li>Rewards &amp; Perks</li>
+        <li>Volunteer Requests</li>
+        <li>Volunteer Instructions</li>
+        <li>My Volunteering History</li>
+      </ul>
+    </div>
+    <div class="moscow-col wont">
+      <div class="moscow-header">Won't Have (MVP) — 2 Items</div>
+      <ul>
+        <li>Skills &amp; Experience</li>
+        <li>Recognition / Contribution Record</li>
+      </ul>
+      <div class="wont-note">"Won't-Have means deliberately outside MVP scope, not permanently rejected."</div>
+    </div>
+  </div>
+
+  <h3>Defending the Four Must-Haves</h3>
+  <p>"These four items form the smallest structure that supports discovery and evaluation on the student side, and manpower definition and discovery on the committee side."</p>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="box student-box">
+        <div class="box-label student">Student Side</div>
+        <p style="text-align:center;font-size:15px;margin:10px 0;">Volunteer Opportunities &darr; Opportunity Details</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box committee-box">
+        <div class="box-label committee">Committee Side</div>
+        <p style="text-align:center;font-size:15px;margin:10px 0;">Event Volunteer Needs &darr; Available Volunteers</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>The Hard Cut — Why Event Volunteer Needs over Volunteer Commitment / Confirmation</h3>
+  <div class="two-col">
+    <div class="col">
+      <div class="box committee-box">
+        <div class="box-label committee">Winner — Must Have</div>
+        <h3>Event Volunteer Needs</h3>
+        <p>Directly defines the manpower requirement that the committee needs to fill. Without it, the committee side of the minimum loop is incomplete. It is the starting point for the entire committee workflow.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box">
+        <div class="box-label neutral">Should Have</div>
+        <h3>Volunteer Commitment / Confirmation</h3>
+        <p>Reliability is a demonstrated committee concern. However, this feature requires additional workflow and state beyond identifying available volunteers. It is valuable but should follow the core loop rather than define it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DFV -->
+<section id="dfv">
+  <div class="section-title">14</div>
+  <h2>DFV &amp; Business Reality</h2>
+  <p>DFV was used to resolve the hardest prioritization decision using explicit criteria rather than personal preference. Scale: 1–5.</p>
+
+  <div class="dfv-grid">
+    <div class="dfv-letter-card">
+      <div class="big-letter">D</div>
+      <div class="word">Desirability</div>
+      <div class="desc">How strongly does the feature address a demonstrated user need?</div>
+    </div>
+    <div class="dfv-letter-card">
+      <div class="big-letter">F</div>
+      <div class="word">Feasibility</div>
+      <div class="desc">How realistically can it be implemented within MVP scope?</div>
+    </div>
+    <div class="dfv-letter-card">
+      <div class="big-letter">V</div>
+      <div class="word">Viability</div>
+      <div class="desc">How strongly does it support the university/committee's operational objective?</div>
+    </div>
+  </div>
+
+  <figure>
+    <img src="assets/dfv-matrix.jpg" class="asset" alt="DFV matrix showing the minimum two-sided loop and DFV scores table. Event Volunteer Needs scores 5 Desirability, 5 Feasibility, 5 Viability for a total of 15 out of 15. Volunteer Commitment and Confirmation scores 5, 4, 5 for a total of 14 out of 15. Winner: Event Volunteer Needs." />
+    <figcaption>DFV Matrix — Desirability, Feasibility, Viability. Scale 1–5.</figcaption>
+  </figure>
+
+  <div class="dfv-compare">
+    <div class="dfv-card winner">
+      <div class="dfv-card-head">
+        <h3>Event Volunteer Needs</h3>
+        <div class="dfv-total">15/15 — Winner</div>
+      </div>
+      <div class="dfv-score-row"><span class="dim">Desirability</span><span class="score">5</span><span class="reason">Directly addresses the committee's demonstrated manpower requirement.</span></div>
+      <div class="dfv-score-row"><span class="dim">Feasibility</span><span class="score">5</span><span class="reason">Can be represented as structured event/task requirement information without complex matching or automation.</span></div>
+      <div class="dfv-score-row"><span class="dim">Viability</span><span class="score">5</span><span class="reason">Directly supports the committee's operational goal of filling event manpower requirements.</span></div>
+    </div>
+    <div class="dfv-card runner">
+      <div class="dfv-card-head">
+        <h3>Volunteer Commitment / Confirmation</h3>
+        <div class="dfv-total">14/15</div>
+      </div>
+      <div class="dfv-score-row"><span class="dim">Desirability</span><span class="score">5</span><span class="reason">Reliability and commitment are demonstrated committee concerns.</span></div>
+      <div class="dfv-score-row"><span class="dim">Feasibility</span><span class="score">4</span><span class="reason">Requires additional workflow and state management beyond identifying available volunteers.</span></div>
+      <div class="dfv-score-row"><span class="dim">Viability</span><span class="score">5</span><span class="reason">Supports reliable coordination and reduces uncertainty after recruitment.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL MVP -->
+<section id="mvp">
+  <div class="section-title">15</div>
+  <h2>Final MVP — Four Essential Capabilities</h2>
+  <p>"Everything else is deliberately sequenced around this core."</p>
+
+  <div class="mvp-grid">
+    <div class="mvp-card">
+      <div class="mvp-num">01</div>
+      <h3>Volunteer Opportunities</h3>
+      <p>"Discover what is available."</p>
+    </div>
+    <div class="mvp-card">
+      <div class="mvp-num">02</div>
+      <h3>Opportunity Details</h3>
+      <p>"Understand what the opportunity involves."</p>
+    </div>
+    <div class="mvp-card">
+      <div class="mvp-num">03</div>
+      <h3>Event Volunteer Needs</h3>
+      <p>"Understand what manpower the committee requires."</p>
+    </div>
+    <div class="mvp-card">
+      <div class="mvp-num">04</div>
+      <h3>Available Volunteers</h3>
+      <p>"Identify students who are available."</p>
+    </div>
+  </div>
+
+  <h3>End-to-End Traceability</h3>
+
+  <div class="chain">
+    <div class="chain-header">Chain 1 — Opportunity Details &rarr; MUST-HAVE</div>
+    <div class="chain-step">5/10 don't know what the work involves &rarr; Information Gap &rarr; Need for clear task understanding &rarr; US02 &rarr; Opportunity Details &rarr; MUST-HAVE</div>
+  </div>
+
+  <div class="chain">
+    <div class="chain-header">Chain 2 — Volunteer Opportunities &rarr; MUST-HAVE</div>
+    <div class="chain-step">5/10 struggled to find suitable opportunities &rarr; Discovery Gap &rarr; Fragmented discovery &rarr; US01 &rarr; Volunteer Opportunities &rarr; MUST-HAVE</div>
+  </div>
+
+  <div class="chain">
+    <div class="chain-header">Chain 3 — Available Volunteers &rarr; MUST-HAVE</div>
+    <div class="chain-step">Committee difficulty knowing who is available (3/6) &rarr; Availability Gap &rarr; Recruitment uncertainty &rarr; US04 &rarr; Available Volunteers &rarr; MUST-HAVE</div>
+  </div>
+
+  <div class="chain">
+    <div class="chain-header">Chain 4 — Event Volunteer Needs &rarr; MUST-HAVE</div>
+    <div class="chain-step">Event setup/breakdown needs additional volunteers (recurring) &rarr; Manpower Requirement &rarr; Tree Test failure (1/3) &rarr; V2 IA change &rarr; Event Volunteer Needs &rarr; MUST-HAVE</div>
+  </div>
+</section>
+
+<!-- LIMITATIONS -->
+<section id="limitations">
+  <div class="section-title">16</div>
+  <h2>Limitations</h2>
+  <p>Research integrity requires transparent acknowledgement of scope and constraint.</p>
+
+  <ul class="limitations-list">
+    <li>The research sample is exploratory and not statistically generalizable.</li>
+    <li>Tree Test analysis uses 6 independently verifiable participants after excluding duplicate exports (P02 and P03).</li>
+    <li>V2 was not re-tested within this examination cycle. It is Tree-Test-informed, not independently validated.</li>
+    <li>Some Card Sort items had weak or inconsistent consensus.</li>
+    <li>"Think" and "Feel" portions of empathy maps contain inference and must not be presented as direct observation or direct quotes.</li>
+  </ul>
+</section>
+
+<!-- CONCLUSION -->
+<div class="conclusion">
+  <h2>Final Conclusion</h2>
+  <p>"The research indicates that the broken experience is not simply a lack of volunteering opportunities. It is an information and coordination problem affecting both sides of the interaction."</p>
+  <p>"Students need clearer information to evaluate short, flexible opportunities, while committees need visibility into available manpower and specific event requirements."</p>
+  <p>"The final V2 Information Architecture reflects observed mental models and Tree Test findings. The MVP prioritization limits the first version to four essential capabilities: discovering opportunities, understanding opportunities, defining event volunteer needs, and identifying available volunteers."</p>
+  <div class="process-final">
+    EMPATHIZE &rarr; DEFINE &rarr; STRUCTURE &rarr; TEST &rarr; PIVOT &rarr; PRIORITIZE
+  </div>
+  <div class="final-badge">Research-Backed HCI Blueprint</div>
+</div>
+
+</main>
+
+<footer>
+  University Volunteering — HCI Research &nbsp;|&nbsp; Evidence-Based Information Architecture &nbsp;|&nbsp; Academic Submission
+</footer>
+
+</body>
+</html>
